@@ -1,5 +1,8 @@
 var dgMovieApp = angular.module('dgMovieApp', []);
 
+dgMovieApp.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+}]);
 
 dgMovieApp.controller('MovieController', ['$scope', '$http', function($scope, $http){
     

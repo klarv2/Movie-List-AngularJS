@@ -1,4 +1,4 @@
-# deploy at: https://klarv2.github.io/Movie-List-AngularJS/#
+# Deploy url: https://klarv2.github.io/Movie-List-AngularJS/#
 
 # Front-End Coding Challenge
 

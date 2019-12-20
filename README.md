@@ -1,4 +1,5 @@
-# Deploy url: https://klarv2.github.io/Movie-List-AngularJS/#
+# clone repo and run the app using "http-server -o"
+npm i http-server must be install first
 
 # Front-End Coding Challenge
 

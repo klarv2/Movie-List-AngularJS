@@ -1,13 +1,26 @@
-var dgMovieApp = angular.module('dgMovieApp', []);
+'use strict';
 
-dgMovieApp.config(['$qProvider', function ($qProvider) {
-    $qProvider.errorOnUnhandledRejections(false);
-}]);
+/* app */
 
-dgMovieApp.controller('MovieController', ['$scope', '$http', function($scope, $http){
-    
-    $http.get("https://www.omdbapi.com/?s=Batman&apikey=242ae804").then(function(res){
-        $scope.movies = res.data.Search;
-       // console.log($scope.movies)
-    });
-}]);
+var dgMovieApp = angular.module("dgMovieApp", [
+    'dgMovieAppServices',
+    'dgMovieAppControllers'
+]);
+
+
+dgMovieApp.directive('headerApp', function(){
+    return{
+        templateUrl: 'Views/header.html' 
+    }
+});
+
+dgMovieApp.directive('movieListApp', function(){
+    return{
+        templateUrl: 'Views/moviesList.html',
+        controller: 'MovieController' 
+    }
+});
+
+
+
+
